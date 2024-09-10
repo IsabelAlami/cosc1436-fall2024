@@ -50,6 +50,60 @@ int main()
 
     std::cout << length;
 
+    //id rules ::; starts with letter or underscore then consists of letters, digits, underscores, may NOT be a keyword
+
+    // Types define what kind of data is stored, range, and size
+    //| Type | Size | Range |
+    //-----------------------
+    //|short| 2 | +- 32767 (intengral) | short s;
+    //|int| 4 | +- 2 billion (default) | int i = 0;
+    //|long| 4 | +- 2 billion | long l = 5L;
+    //|unsigned *| * | 0- | unsigned int ui = 3U /3UL (for long);
+
+    //Floats
+    //| float | 3 | E+- 38 | precision 5 - 7 |
+    //| double | 8 | E+- 308 | (default) | precision: 12 - 15 | double pi = 3.14159 , double largeNumber = 10E100;
+    
+    //Text
+    //| char | 1 | -128 to 127 | character | char c = 'A';
+    //| std::string | * | text | std::string name = "Bob";
+    //| bool | 1? | true or false | bool isPassing = true;
+    // int intSize = sizeof(int); 
+
+    //Assignment
+    // asp_op ::= V = E
+    // MUST be type compatible
+    // Expression of type Vt
+    // Associativity - Right
+    int shapeLength = 10;
+    int shapeWidth = 20;
+    int shapeArea;
+
+    shapeArea = shapeLength;
+
+    shapeArea = shapeLength = shapeWidth = 20;
+    //r value = any expression on right side of the asn (assign)
+    //l value = any expression on left side of the asn (assign) (variable)
+    //E ::= (id or asn)
+
+    //Arithmetic operators
+    // + - * / % (int mod)
+    shapeArea = shapeLength * shapeWidth;
+    int remainer = 10 % 3; // 1
+    int result = 10 / 3; // 3
+    double dresult = 10.0 / 3.0; //3.333
+
+    //signed unary_op ::= + Et | - Et
+    int positiveValue = 10;
+    int negativeValue = -positiveValue;
+
+    //Scope
+    // block-statement ::= { S* } - narrow down lifetime of variable :P
+    {
+        int newVariable = 10;
+    }
+
+    
 
 }
 
