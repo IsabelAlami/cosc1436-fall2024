@@ -1,3 +1,5 @@
+// GradeCalculator.cpp : This file contains the 'main' function. Program execution begins and ends there.
+//
 // Lab 1
 // Isabel Alamillo 2401402
 // COSC 1436 Fall Semester 2024
@@ -60,3 +62,5 @@ int main()
     cout << labgrFour << endl;
 
     double labAvg;
+
+}
