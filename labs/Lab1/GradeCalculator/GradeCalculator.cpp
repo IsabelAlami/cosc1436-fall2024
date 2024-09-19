@@ -92,8 +92,7 @@ int main()
     cout << setw(25) << setfill('-') << "" << setfill(' ') << endl;
     cout << "Student Name: " << name << endl;
     cout << setw(25) << setfill('-') << "" << setfill(' ') << endl;
-    cout << "Lab Average (65%)
-        : " << labAvg << endl;
+    cout << "Lab Average (65%): " << labAvg << endl;
     cout << setw(25) << setfill('-') << "" << setfill(' ') << endl;
     cout << "Exam Average (20%): " << examAvg << endl;
     cout << setw(25) << setfill('-') << "" << setfill(' ') << endl;
@@ -105,15 +104,6 @@ int main()
     cout << setw(25) << setfill('-') << "" << setfill(' ') << endl;
     
     
-
-
-
-
-}
-
-
-    
-
 
 
 
