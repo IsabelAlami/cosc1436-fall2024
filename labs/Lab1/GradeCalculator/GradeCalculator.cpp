@@ -21,47 +21,101 @@ int main()
 
     string name;
     cout << "Enter your name: ";
-    cin >> name;
     getline(cin, name);
 
-    int labgrOne;
+    double labgrOne;
     cout << "Enter a lab grade: ";
     cin >> labgrOne;
 
-    int labgrTwo;
+    double labgrTwo;
     cout << "Enter a lab grade: ";
     cin >> labgrTwo;
 
-    int labgrThree;
+    double labgrThree;
     cout << "Enter a lab grade: ";
     cin >> labgrThree;
 
-    int labgrFour;
+    double labgrFour;
     cout << "Enter a lab grade: ";
     cin >> labgrFour;
 
-    int examgrOne;
+
+    double examgrOne;
     cout << "Enter an exam grade: ";
     cin >> examgrOne;
 
-    int examgrTwo;
+    double examgrTwo;
     cout << "Enter an exam grade: ";
     cin >> examgrTwo;
 
-    int examgrThree;
+    double examgrThree;
     cout << "Enter an exam grade: ";
     cin >> examgrThree;
 
+    double participationOne;
+    cout << "Enter participation grade: ";
+    cin >> participationOne;
+
+    double finalExam;
+    cout << "Enter final exam grade: ";
+    cin >> finalExam;
+
     //Display Username and Grades/Labs
 
-    cout << name << endl;
-    cout << "Lab Grades" << endl;
+    //lab grades
+    cout << "Student: " << name << endl;
+    cout << "Lab Grades: " << endl;
+    cout << setw(20) << setfill('-') << "" << setfill(' ') << endl;
     cout << labgrOne << endl;
     cout << labgrTwo << endl;
     cout << labgrThree << endl;
     cout << labgrFour << endl;
+    double labAvg = (labgrOne + labgrTwo + labgrThree + labgrFour)/ 4;
+    cout << setw(25) << setfill('-') << "" << setfill(' ') << endl;
+    cout << "Average Lab Grade: " << labAvg << endl;
+    cout << setw(25) << setfill('-') << "" << setfill(' ') << endl;
 
-    double labAvg;
+    //exam grades
+    cout << "Student: " << name << endl;
+    cout << "Exam Grades: " << endl;
+    cout << setw(20) << setfill('-') << "" << setfill(' ') << endl;
+    cout << examgrOne << endl;
+    cout << examgrTwo << endl;
+    cout << examgrThree << endl;
+    double examAvg = (examgrOne + examgrTwo + examgrThree)/ 3;
+    cout << setw(25) << setfill('-') << "" << setfill(' ') << endl;
+    cout << "Average Exam Grade: " << examAvg << endl;
+    cout << setw(25) << setfill('-') << "" << setfill(' ') << endl;
+
+    //Story 5
+    double classAvg = (labAvg * 0.65) + (examAvg * 0.20) + (participationOne * 0.05) + (finalExam * 0.10);
+    cout << setw(25) << setfill('-') << "" << setfill(' ') << endl;
+    cout << "Student Name: " << name << endl;
+    cout << setw(25) << setfill('-') << "" << setfill(' ') << endl;
+    cout << "Lab Average (65%)
+        : " << labAvg << endl;
+    cout << setw(25) << setfill('-') << "" << setfill(' ') << endl;
+    cout << "Exam Average (20%): " << examAvg << endl;
+    cout << setw(25) << setfill('-') << "" << setfill(' ') << endl;
+    cout << "Participation Average (5%): " << participationOne << endl;
+    cout << setw(25) << setfill('-') << "" << setfill(' ') << endl;
+    cout << "Final Exam Grade (10%): " << finalExam << endl;
+    cout << setw(20) << setfill('-') << "" << setfill(' ') << endl;
+    cout << "Class Average: " << classAvg << endl;
+    cout << setw(25) << setfill('-') << "" << setfill(' ') << endl;
+    
+    
+
+
+
+
+}
+
+
+    
+
+
+
 
 
 }
