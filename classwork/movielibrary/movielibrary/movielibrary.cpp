@@ -22,6 +22,8 @@ struct Movie
     int ReleaseYear;
 
     bool IsClassic;
+
+    string Genre;
 };
 
 //Integral data type with named values
@@ -247,10 +249,52 @@ int main()
             };
         };
     };
-    ///// Display movie details
-    cout << "---------------" << endl;
-    cout << movie.Title << " (" << movie.ReleaseYear << ")" << endl;
-    cout << "Run Length (mins) " << movie.RunLength << endl;
+
+    cin.ignore();
+
+    //Get genre(s)
+    //int genreCount = 0;
+    //while (genreCount < 5)
+    //{
+    //    cout << "Enter optional genre :" << (genreCount + 1) << ": ";
+    //    
+    //    string genre;
+    //    getline(cin, genre);
+    //    if (genre != "")
+    //    {
+    //        movie.Genre += genre + ", ";
+    //    };
+
+    //for loop - designed to iterate a fixed number of times with a well known start and end
+    //for (int.exp; test.exp; update.exp)
+    //S;
+    //int.exp evaluated before the expression
+    //test.exp is the condition, as long as true will loop
+    //update.exp 
+    //int genreIndex = 0;
+    for (int index = 0; index < 5; index++)
+    {
+        cout << "Enter optional genre " << (index + 1) << ": ";
+        
+        string genre;
+        getline(cin, genre);
+        if (genre == "")
+            break; //Exits the loop
+        continue; //only valid in loops - stops the current iteration and loops again
+            
+        movie.Genre += genre + ", ";
+    };
+//cout << genreIndex
+
+    //More Complex for loops
+    //for (int index = 0, int y = 1; index < 5 , index < y; ++index, y+=2){};
+    //int someIndex = 0;
+    //for (;;) {}; //infinite loop
+
+        ///// Display movie details
+        cout << "---------------" << endl;
+        cout << movie.Title << " (" << movie.ReleaseYear << ")" << endl;
+        cout << "Run Length (mins) " << movie.RunLength << endl;
 
     //Long form - 1
     //if (movie.IsClassic? "yes" << endl;
@@ -272,9 +316,8 @@ int main()
     //Shortest form using conditional operator => Eb? Et: Ef
     // Et & Ef = must be the exact same type, type coercion is not allowed
     cout << "Is Classic? " << (movie.IsClassic ? "Yes" : "No") << endl;
-
-
-
+    if (movie.Genre != "")
+        cout << "Genre(s) " << movie.Genre << endl;
     if (movie.Description != "")
         cout << movie.Description << endl;
     cout << "___________________" << endl;
