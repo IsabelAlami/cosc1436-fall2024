@@ -78,6 +78,28 @@ int main()
     //cout << left << " != " << right << " = " << (left != right) << endl;
     //cout << endl;
 
+    //Nested Loop demo
+    int iterations = 0;
+    for (int i = 0; i < 100; ++i)
+    {
+        if (i != 0)
+        {
+            char choice;
+            cout << "Do you want to give up?";
+            cin >> choice;
+            if (choice == 'Y' || choice == 'y')
+                break;
+        };
+        
+        for (int j = 0; j < 10; ++j)
+        {
+            ++iterations;
+            cout << i << ", " << j << " = " << iterations << endl;
+            
+        };
+
+    };
+    cout << "Total iterations = " << iterations << endl;
 
     // Show Menu
     cout << "Movie Library" << endl;
@@ -90,7 +112,7 @@ int main()
     //Pretest loop, Statement executes 0 or more times
     //Get Input
     //bool done = false;
-    while (menuCommand == 0)
+    do
     {
         char input;
         cin >> input;
@@ -113,8 +135,10 @@ int main()
 
             default: cout << "Bad input" << endl; break;
         };
-    };
+    } while (menuCommand == 0);
+    
     cin.ignore();
+    
     //// Handle menu command
     switch (menuCommand)
     {
@@ -130,7 +154,8 @@ int main()
     Movie movie;// = {0};
 
     //Get required title
-    while (movie.Title == "")
+    //while (movie.Title == "")
+    do
     {
         cout << "Enter a title: ";
         //cin >> movie.Title;
@@ -148,10 +173,11 @@ int main()
 
         if (movie.Title == "")
             cout << "ERROR: Title is required" << endl;
-    };
+    } while (movie.Title == "");
+    
     //Get run length, at least 0, minutes
-    movie.RunLength = -1;
-    while (movie.RunLength < 0 || movie.RunLength > 1440)
+    //movie.RunLength = -1;
+    do //while (movie.RunLength < 0 || movie.RunLength > 1440)
     {
         cout << "Enter run length (in minutes): ";
         cin >> movie.RunLength;
@@ -177,7 +203,7 @@ int main()
         //};
         if (movie.RunLength < 0 || movie.RunLength > 1440)
             cout << "ERROR: Run length must be between 0 and 1440" << endl;
-    };
+    } while (movie.RunLength < 0 || movie.RunLength > 1440);
     cin.ignore();
 
     //Get release year, at least 1900
