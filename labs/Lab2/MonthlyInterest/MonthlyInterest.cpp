@@ -83,5 +83,5 @@ int main()
         if (loanAmount < 0)
             loanAmount = 0;
     }
-    cout << left << fixed << setprecision(2) << setw(35) << "Total Payments: " << totalPaymentValue << setw(35) << "Total Interest: " << totalInterestValue << endl;
+    cout << left << fixed << setprecision(2) << "Total Payments: " << totalPaymentValue << "Total Interest: " << totalInterestValue << endl;
 } 
