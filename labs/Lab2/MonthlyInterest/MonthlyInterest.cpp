@@ -45,7 +45,7 @@ int main()
 
     do
     {
-        cout << "Please enter the amount you would like to pay this month (0 to balance amount): ";
+        cout << "Please enter the amount you would like to pay monthly (0 to balance amount): ";
         cin >> payment;
 
         if (payment > loanAmount)
