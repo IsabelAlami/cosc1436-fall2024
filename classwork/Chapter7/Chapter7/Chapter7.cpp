@@ -53,7 +53,62 @@ void TestPassByReference()
     Display(rc);
 }
 
+void GradeArrayDemo()
+{
+    const int MaxGrades = 20;
+    double dummyValue2 = -1;
+    int grades[MaxGrades];
+    double dummyValue = 0;
+    
+    int estimatedMaxArraySize = //Size of array / size of element
+        sizeof(grades) / sizeof(int);
+
+    int count = 0;
+    for (int index = 0; index < MaxGrades; ++index)//, ++count
+    {
+        std::cout << "Enter a grade: ";
+        std::cin >> grades[index];
+        //grades[index] = 100;
+
+        if (grades[index] <= 0)
+            break;
+
+        ++count;
+    };
+
+    //for (int index = 0; index < MaxGrades; ++index) for entire array
+    for (int index = 0; index < count++; ++index)
+    {
+        std::cout << grades[index] << std::endl;
+    };
+
+    int indexToChange;
+    do
+    {
+        std::cout << "Enter the index of the grade to change: ";
+        std::cin >> indexToChange;
+    } while (indexToChange < 0 || indexToChange >= MaxGrades);
+
+    int newGrade;
+    std::cout << "Enter the new grades: ";
+    std::cin >> newGrade;
+
+    grades[indexToChange] = newGrade;
+}
+
+void InitArrayDemo()
+{
+    const int MaxRates = 100;
+    double payRates[MaxRates] = {0}; //Zero initialize
+
+
+}
 int main()
+{
+    InitArrayDemo();
+}
+
+void NameArrayDemo()
 {
     const int MaxStudents = 100; //Solve maintenance issue of array size
     std::string students[MaxStudents];
