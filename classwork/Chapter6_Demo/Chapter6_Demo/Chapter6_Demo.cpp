@@ -107,8 +107,7 @@ void SwitchDemo()
 
 int main()
 {
-    /*
-    */
+    Factorial(10);
 
     //DisplayTruthTable();
 
