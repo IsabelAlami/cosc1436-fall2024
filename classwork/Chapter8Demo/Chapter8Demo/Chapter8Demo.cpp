@@ -38,11 +38,20 @@ void EmptyDemo()
     float payRate = 12.50;
 
     // Always init to 0 or valid memory
-    //float* pPayRate = NULL;  // C, old school not recommended
+    // float* pPayRate = NULL;  // C, old school not recommended
     float* pPayRate = nullptr; // C++, recommended
 
     // Print Value and dereferenced value
-    std::cout << pPayRate << " = " << *pPayRate << std::endl;
+    std::cout << pPayRate << " = ";
+
+    // Always verify pointer before dereferencing
+    //  if (ptr != nullptr)
+    //  if (ptr != NULL) // not recommended
+    //  if (ptr)
+    // if (pPayRate != nullptr)
+    if (pPayRate)
+        std::cout << *pPayRate;
+    std::cout << std::endl;
 }
 
 int main()
